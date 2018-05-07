@@ -1,0 +1,72 @@
+---
+Host OS:
+CentOS Linux release 7.4.1708 (Core)
+3.10.0-693.21.1.el7.x86_64 #1 SMP Wed Mar 7 19:03:37 UTC 2018 x86_64 x86_64 GNU/Linux
+
+Docker version 18.03.1-ce, build 9ee9f40
+
+docker-compose version 1.21.2, build a133471
+
+go version go1.10.2 linux/amd64
+
+Python 2.7.5
+
+NodeJS Version: v8.11.1
+
+NPM Version: 5.6.0
+
+Git repo: https://github.com/hyperledger/fabric-samples.git
+
+Commit SHA: 1252c7a0eee39cb7b0fe3162462607c632ea9ac0
+---
+
+
+[root@localhost first-network]# go env
+GOARCH="amd64"
+GOBIN=""
+GOCACHE="/root/.cache/go-build"
+GOEXE=""
+GOHOSTARCH="amd64"
+GOHOSTOS="linux"
+GOOS="linux"
+GOPATH="/opt/gopath"
+GORACE=""
+GOROOT="/usr/local/go"
+GOTMPDIR=""
+GOTOOLDIR="/usr/local/go/pkg/tool/linux_amd64"
+GCCGO="gccgo"
+CC="gcc"
+CXX="g++"
+CGO_ENABLED="1"
+CGO_CFLAGS="-g -O2"
+CGO_CPPFLAGS=""
+CGO_CXXFLAGS="-g -O2"
+CGO_FFLAGS="-g -O2"
+CGO_LDFLAGS="-g -O2"
+PKG_CONFIG="pkg-config"
+GOGCCFLAGS="-fPIC -m64 -pthread -fno-caret-diagnostics -Qunused-arguments -fmessage-length=0 -fdebug-prefix-map=/tmp/go-build732746680=/tmp/go-build -gno-record-gcc-switches"
+
+[root@localhost first-network]# echo $PATH
+/opt/fabric/fabric-samples/bin:/opt/gopath/bin:/usr/local/go/bin:/usr/local/bin:/usr/local/sbin:/usr/local/bin:/sbin:/bin:/usr/sbin:/usr/bin:/opt/node/bin:/root/bin
+
+
+[root@localhost first-network]# docker images
+REPOSITORY                     TAG                 IMAGE ID            CREATED             SIZE
+hyperledger/fabric-ca          latest              72617b4fa9b4        7 weeks ago         299MB
+hyperledger/fabric-ca          x86_64-1.1.0        72617b4fa9b4        7 weeks ago         299MB
+hyperledger/fabric-tools       latest              b7bfddf508bc        7 weeks ago         1.46GB
+hyperledger/fabric-tools       x86_64-1.1.0        b7bfddf508bc        7 weeks ago         1.46GB
+hyperledger/fabric-orderer     latest              ce0c810df36a        7 weeks ago         180MB
+hyperledger/fabric-orderer     x86_64-1.1.0        ce0c810df36a        7 weeks ago         180MB
+hyperledger/fabric-peer        latest              b023f9be0771        7 weeks ago         187MB
+hyperledger/fabric-peer        x86_64-1.1.0        b023f9be0771        7 weeks ago         187MB
+hyperledger/fabric-javaenv     latest              82098abb1a17        7 weeks ago         1.52GB
+hyperledger/fabric-javaenv     x86_64-1.1.0        82098abb1a17        7 weeks ago         1.52GB
+hyperledger/fabric-ccenv       latest              c8b4909d8d46        7 weeks ago         1.39GB
+hyperledger/fabric-ccenv       x86_64-1.1.0        c8b4909d8d46        7 weeks ago         1.39GB
+hyperledger/fabric-zookeeper   latest              92cbb952b6f8        2 months ago        1.39GB
+hyperledger/fabric-zookeeper   x86_64-0.4.6        92cbb952b6f8        2 months ago        1.39GB
+hyperledger/fabric-kafka       latest              554c591b86a8        2 months ago        1.4GB
+hyperledger/fabric-kafka       x86_64-0.4.6        554c591b86a8        2 months ago        1.4GB
+hyperledger/fabric-couchdb     latest              7e73c828fc5b        2 months ago        1.56GB
+hyperledger/fabric-couchdb     x86_64-0.4.6        7e73c828fc5b        2 months ago        1.56GB
