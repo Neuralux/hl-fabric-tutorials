@@ -94,6 +94,8 @@ usermod -a -G docker vagrant
 chown -R vagrant:vagrant /opt/gopath /opt/fabric
 sed -i /opt/fabric/fabric-samples/first-network/docker-compose-cli.yaml \
     -e 's/environment:/environment:\n      - GODEBUG=netdns=go/'
+sed -i /opt/fabric/fabric-samples/first-network/base/peer-base.yaml \
+    -e 's/environment:/environment:\n      - GODEBUG=netdns=go/'
 ##
 
 
