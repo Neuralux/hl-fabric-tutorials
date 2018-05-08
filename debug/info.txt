@@ -7,7 +7,7 @@ Docker version 18.03.1-ce, build 9ee9f40
 
 docker-compose version 1.21.2, build a133471
 
-go version go1.10.2 linux/amd64
+go version go1.9.6 linux/amd64
 
 Python 2.7.5
 
@@ -70,3 +70,8 @@ hyperledger/fabric-kafka       latest              554c591b86a8        2 months 
 hyperledger/fabric-kafka       x86_64-0.4.6        554c591b86a8        2 months ago        1.4GB
 hyperledger/fabric-couchdb     latest              7e73c828fc5b        2 months ago        1.56GB
 hyperledger/fabric-couchdb     x86_64-0.4.6        7e73c828fc5b        2 months ago        1.56GB
+
+[vagrant@localhost base]$ docker ps
+CONTAINER ID        IMAGE                               COMMAND             CREATED             STATUS              PORTS                    NAMES
+08b398a5fefa        hyperledger/fabric-tools:latest     "/bin/bash"         4 minutes ago       Up 4 minutes                                 cli
+b161f3e53983        hyperledger/fabric-orderer:latest   "orderer"           4 minutes ago       Up 4 minutes        0.0.0.0:7050->7050/tcp   orderer.example.com
