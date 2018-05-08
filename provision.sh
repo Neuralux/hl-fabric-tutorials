@@ -9,7 +9,7 @@ set -e
 docker_version=17.12.1
 docker_compose_version=1.21.2
 fabric_version=1.1.0
-go_version=1.10.2
+go_version=1.9.6
 node_version=v8.11.1
 npm_version=5.6.0
 python_version=2.7.5
@@ -92,6 +92,8 @@ curl -sSL https://goo.gl/6wtTN5 | bash -s ${fabric_version}
 # vagrant user
 usermod -a -G docker vagrant
 chown -R vagrant:vagrant /opt/gopath /opt/fabric
+sed -i /opt/fabric/fabric-samples/first-network/docker-compose-cli.yaml \
+    -e 's/environment:/environment:\n      - GODEBUG=netdns=go/'
 ##
 
 
