@@ -10,7 +10,7 @@ docker_version=17.12.1
 docker_compose_version=1.21.2
 fabric_version=1.1.0
 go_version=1.9.6
-node_version=v8.11.1
+node_version=v8.9.4
 npm_version=5.6.0
 python_version=2.7.5
 ##
@@ -23,7 +23,7 @@ rm -rf /var/cache/yum
 yum clean all
 yum check-update || test $? -eq 100
 yum upgrade -y
-yum install -y device-mapper-persistent-data epel-release git lvm2 yum-utils
+yum install -y device-mapper-persistent-data epel-release gcc gcc-c++ git lvm2 yum-utils
 yum-config-manager --enable epel
 cat <<- EOF >> /etc/bashrc
 export GOROOT=/usr/local/go
@@ -96,6 +96,12 @@ sed -i /opt/fabric/fabric-samples/first-network/docker-compose-cli.yaml \
     -e 's/environment:/environment:\n      - GODEBUG=netdns=go/'
 sed -i /opt/fabric/fabric-samples/first-network/base/peer-base.yaml \
     -e 's/environment:/environment:\n      - GODEBUG=netdns=go/'
+sed -i /opt/fabric/fabric-samples/basic-network/docker-compose.yaml \
+    -e 's/environment:/environment:\n      - GODEBUG=netdns=go/g'
+sed -i /opt/fabric/fabric-samples/fabcar/package.json \
+    -e 's/~//g'
+sed -i /opt/fabric/fabric-samples/fabcar/package.json \
+    -e 's/\^1.6.0/1.9.1/'
 ##
 
 

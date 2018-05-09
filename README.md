@@ -10,3 +10,10 @@
       [vagrant@localhost ~]$ cd /opt/fabric/fabric-samples/first-network
       [vagrant@localhost first-network]$ ./byfn.sh up
     ```
+1. [Writing Your First Application](http://hyperledger-fabric.readthedocs.io/en/latest/write_first_app.html):
+    ```
+      [vagrant@localhost first-network]$ ./byfn.sh down
+      [vagrant@localhost first-network]$ cd /opt/fabric/fabric-samples/fabcar
+      [vagrant@localhost fabcar]$ npm install
+      [vagrant@localhost fabcar]$ ./startFabric.sh
+    ```
