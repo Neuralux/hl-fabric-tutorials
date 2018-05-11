@@ -17,3 +17,11 @@
       [vagrant@localhost fabcar]$ npm install
       [vagrant@localhost fabcar]$ ./startFabric.sh
     ```
+1. [Adding an Org to a Channel](http://hyperledger-fabric.readthedocs.io/en/latest/channel_update_tutorial.html)
+    ```
+      $: vagrant ssh
+      [vagrant@localhost ~]$ cd /opt/fabric/fabric-samples/first-network
+      [vagrant@localhost first-network]$ ./byfn.sh down
+      [vagrant@localhost first-network]$ ./byfn.sh up
+      [vagrant@localhost first-network]$ ./eyfn.sh up
+    ```

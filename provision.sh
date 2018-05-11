@@ -96,12 +96,14 @@ sed -i /opt/fabric/fabric-samples/first-network/docker-compose-cli.yaml \
     -e 's/environment:/environment:\n      - GODEBUG=netdns=go/'
 sed -i /opt/fabric/fabric-samples/first-network/base/peer-base.yaml \
     -e 's/environment:/environment:\n      - GODEBUG=netdns=go/'
-sed -i /opt/fabric/fabric-samples/basic-network/docker-compose.yaml \
+sed -i /opt/fabric/fabric-samples/basic-network/docker-compose.yml \
     -e 's/environment:/environment:\n      - GODEBUG=netdns=go/g'
 sed -i /opt/fabric/fabric-samples/fabcar/package.json \
     -e 's/~//g'
 sed -i /opt/fabric/fabric-samples/fabcar/package.json \
     -e 's/\^1.6.0/1.9.1/'
+sed -i /opt/fabric/fabric-samples/first-network/docker-compose-org3.yaml \
+    -e 's/environment:/environment:\n      - GODEBUG=netdns=go/g'
 ##
 
 
